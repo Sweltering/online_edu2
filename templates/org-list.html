@@ -70,7 +70,7 @@
                         {% for course_org in all_orgs.object_list %}
                             <dl class="des difdes">
                                 <dt>
-                                    <a href="org-detail-homepage.html">
+                                    <a href="{% url 'org:org_home' course_org.id %}">
                                         {#                            data-url="{{ MEDIA_URL }}{{ course_org.image }}机构图片的访问地址，还需在urls中配置访问图片路径#}
                                         <img width="200" height="120" class="scrollLoading"
                                              data-url="{{ MEDIA_URL }}{{ course_org.image }}"/>
